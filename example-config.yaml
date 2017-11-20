@@ -1,0 +1,5 @@
+database:
+  name: NAME
+  username: user1
+  pw: password
+  uri: mongodb://localhost:port/NAME
