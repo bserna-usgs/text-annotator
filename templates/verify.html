@@ -1,0 +1,43 @@
+<title>Validate Answers </title>
+<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+{% block page_content %}
+<!-- Page Content -->
+<body>
+<h1 class="page-header">Verify Predicted Answers</h1>
+<div>
+  <h4>Extracted Phrase</h4>
+  {{ phrase }}
+  <br>
+  <h4>Journal:</h4> {{ journal }}
+  <br>
+  <h4>Authors: </h4> {{ authors }}
+  <br>
+  <form action="/get" method=post>
+  <h4>Document ID: </h4> {{ name.id }}
+  <hr>
+  <br>
+  <strong>Current User: </strong>{{ name.name }}
+  <br>
+    <strong>Predicted Dam</strong>: {{ dam }} {{ name.p_dam }}
+    <br>
+    <strong>Predicted Location</strong>: {{ loc }} {{ name.p_loc }}
+    <br>
+    <strong>Predicted Removal Year</strong>: {{ yr }} {{ name.p_yr }}
+    <br>
+    <strong>Predicted River</strong>: {{ river }} {{ name.p_river }}
+    <br>
+    <br>
+    {{ name.csrf_token }}
+    {{ name.submit }}
+    <!--<button type="button submit" class="btn btn-success" name="submit">Save Annotations</button></a>-->  <a href="./get"><button type="button" class="btn btn-primary">Skip to Next Phrase</button></a>
+  </form>
+</body>
+<!-- jQuery -->
+<script src='{{ url_for('static', filename="vendor/jquery/jquery.min.js") }}'></script>
+<!-- Bootstrap Core JavaScript -->
+<script src='{{ url_for('static', filename="vendor/bootstrap/js/bootstrap.min.js") }}'></script>
+{% block scripts %}
+{% endblock scripts %}
+{% endblock %}
