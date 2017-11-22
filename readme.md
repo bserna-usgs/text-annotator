@@ -1,8 +1,10 @@
-## Text Annotator 
+## Text Annotator
 
-This is a simple python Flask web application that allows users to verify and annotate text passages. This was created to add a human-in-the-loop component of a scientific information extraction process that was paired with a question answering system. The goal is to give domain experts the opportunity to give a stamp of approval to certain knowledge that was extracted. 
+This is a simple python Flask web application that allows users to verify and annotate text passages. This was created to add a human-in-the-loop component of a scientific information extraction process that was paired with a question answering system. The goal is to give domain experts the opportunity to give a stamp of approval to certain knowledge that was extracted.
 
-Future efforts will hopefully include methods that allow for users to read a text passage and ask certain topic-focused queries against and aswer from the passage to feed back into the system. 
+Future efforts will hopefully include methods that allow for users to read a text passage and ask certain topic-focused queries against and answer from the passage to feed back into the system.
+
+![](example.png)
 
 ### Quick Start
 
@@ -15,7 +17,7 @@ Use python 3.6 and install the requirements found in the ```requirements.txt``` 
 
 ##### Configuration
 
-To make this quick to plug and play there will be a lot of configuration that can be changed within the yaml files. 
+To make this quick to plug and play there will be a lot of configuration that can be changed within the yaml files.
 
 ##### Run Flask Development Server
 
